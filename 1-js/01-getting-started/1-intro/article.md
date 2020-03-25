@@ -1,28 +1,35 @@
-# An Introduction to JavaScript
+# JavaScript bilen tanyşlyk
 
-Let's see what's so special about JavaScript, what we can achieve with it, and which other technologies play well with it.
+Geliň Javascript diliniň beýle aýratyn bolmagynyň sebäbine, onuň bilen nämeler başaryp biljegimize we onuň başga haýsy tehnologiýalar bilen gowy işleýändigine seredeliň.
 
-## What is JavaScript?
+## JavaScript näme?
+*JavaScript* ilki başda *“web sahypalary janlandyrmak, olara hereket goşmak üçin döredildi”*.
 
-*JavaScript* was initially created to *"make web pages alive"*.
+Bu dilde ýazylan programmalara *skript* diýilýär. Olar göni web sahypanyň HTML koduna ýazylyp bilinýär we sahypa brawzere ýüklenende awtomatiki ýagdaýda işledilýär. 
 
-The programs in this language are called *scripts*. They can be written right in a web page's HTML and run automatically as the page loads.
+Skriptler adaty tekst görnüşinde ýazylýar we işledilýär. Olary işletmek üçin ýörite taýýarlyk ýada aýratyn kompilerlemek gerek däl. 
 
-Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
+Su nukdaýnazardan seredeniňde, Javascript beýleki bir [Java] diýlip atlandyrylýan programmirleme dilinden düýpgöter tapawutly.
+(https://en.wikipedia.org/wiki/Java_(programming_language)).
 
-In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+```smart header="Ona näme üçin <u>Java</u>Script diýilýär?"
+JavaScript ilki basda döredilende onun ady “LiveScript” diýlip atlandyryldy. Ýöne sol wagtlar Java dili gaty meshurdy, seýlelikde täze dörediljek dili Java-nyn "kiçi jigisi" hökmünde görkezmek ony meshur etmek üçin ýardam berjekdi.
 
-```smart header="Why is it called <u>Java</u>Script?"
-When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
-
-But as it evolved, JavaScript became a fully independent language with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.
+Ýöne diliň kämilleşmegi bilen Javascript bütinleý äýrybaşgalaşdy we häzir onuň ýörite [ECMAScript] (http://en.wikipedia.org/wiki/ECMAScript), atly düzgüni bar. Häzirki wagtda JavaScript-iň düýbünden Java bilen baglanşygy ýok.
 ```
 
-Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
+Indi JavaScript diňe bir brawzeriň içinde däl eýsem serwerde we [JavaScript hereketlendirijisi](https://en.wikipedia.org/wiki/JavaScript_engine) bar bolan islendik enjamda işleýär.
 
-The browser has an embedded engine sometimes called a "JavaScript virtual machine".
+Brauzere oturdylan JavaScript hereketlendirijisine köplenç “Javascript wirtual maşyn” hem diýilýär. 
 
-Different engines have different "codenames". For example:
+Dürli hereketlendirijileriň dürli atlary bardyr mysal üçin:
+
+- [v8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine))--Chrome we Opera brauzerlerde.
+-[SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey)-- Firefox-da.
+
+3.	Safari – Nitro, SquirrelFish
+4.	Intenet Explorer brawzeriniň dürli wersiýalary üçin “Trident”,”Chakra” şeýle hem Microsoft Edge üçin “ChakraCore” w.ş.m
+
 
 - [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
