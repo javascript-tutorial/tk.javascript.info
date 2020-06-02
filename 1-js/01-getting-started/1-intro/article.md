@@ -5,7 +5,7 @@ Geliň Javascript diliniň beýle aýratyn bolmagynyň sebäbine, onuň bilen n�
 ## JavaScript näme?
 *JavaScript* ilki başda *“web sahypalary janlandyrmak, olara hereket goşmak üçin döredildi”*.
 
-Bu dilde ýazylan programmalara *skript* diýilýär. Olar göni web sahypanyň HTML koduna ýazylyp bilinýär we sahypa brawzere ýüklenende awtomatiki ýagdaýda işledilýär. 
+Bu dilde ýazylan programmalara *skript* diýilýär. Olar göni web sahypanyň HTML koduna ýazylyp bilinýär we sahypa brawzere ýüklenende awtomatiki ýagdaýda işledilýär.
 
 Skriptler adaty tekst görnüşinde ýazylýar we işledilýär. Olary işletmek üçin ýörite taýýarlyk ýada aýratyn kompilerlemek gerek däl. 
 
@@ -17,7 +17,6 @@ JavaScript ilki basda döredilende onun ady “LiveScript” diýlip atlandyryld
 
 Ýöne diliň kämilleşmegi bilen Javascript bütinleý äýrybaşgalaşdy we häzir onuň ýörite [ECMAScript] (http://en.wikipedia.org/wiki/ECMAScript), atly düzgüni bar. Häzirki wagtda JavaScript-iň düýbünden Java bilen baglanşygy ýok.
 ```
-
 Indi JavaScript diňe bir brawzeriň içinde däl eýsem serwerde we [JavaScript hereketlendirijisi](https://en.wikipedia.org/wiki/JavaScript_engine) bar bolan islendik enjamda işleýär.
 
 Brauzere oturdylan JavaScript hereketlendirijisine köplenç “Javascript wirtual maşyn” hem diýilýär. 
