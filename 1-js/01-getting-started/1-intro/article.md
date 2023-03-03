@@ -1,69 +1,69 @@
-# An Introduction to JavaScript
+# JavaScript-e giriş
 
-Let's see what's so special about JavaScript, what we can achieve with it, and which other technologies play well with it.
+JavaScript-i beýle aýratyn edýän zat nämedigini göreliň, biz onuň bilen näme edip bileris we ol başga haysy tehnologiýalar bilen gowy işleýär.
 
-## What is JavaScript?
+## JavaScript näme?
 
-*JavaScript* was initially created to "make web pages alive".
+*JavaScript* ilkibaşda  "web sahypalary interaktiw" etmek üçin döredilipdi.
 
-The programs in this language are called *scripts*. They can be written right in a web page's HTML and run automatically as the page loads.
+Bu dilde programmalara *skriptler (kod bölejikleri)* diýilýär. Skriptler HTML bilen birikdirilýär we web sahypa ýüklenen-den soň awtomatiki usulda işläp başlaýar.
 
-Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
+Skriptler arassa tekst görnüşinde berilýär we şol durşuna-da işledilýär. Olary işletmek üçin aýratyn taýýarlyk ýa-da kompliýasiýa gerek dal.
 
-In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+Bu nukdaýnazardan, JavaScript [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) dilinden düýbünden tapawutlanýar.
 
 ```smart header="Why is it called <u>Java</u>Script?"
-When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+JavaScript ilkinji döredilende onuň ady: "LiveScript" boldy. Şol wagtlar Java dili has meşhurlyga eýe bolupdy, şeýlelikde JavaScript  Java-nyň "jigisi" bolar diýen düşünje bilen onuň adyna meňzeş at dakmak kararyna geldiler.
 
-But as it evolved, JavaScript became a fully independent language with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.
+Emma JavaScript kämilleşdigiçe, [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript) diýilýän standartizasiýa guramasy bilen bilelikde düýbünden Java-dan garaşsyz dil boldy we häzir Java bilen adyndan başga hiç hili baglanyşygy ýok.
 ```
 
-Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
+Häzirki günlerde, JavaScript diňe brauzer-de däl, eýsem serwer tarapda ýa-da bolmasa islendik enjamda [ JavaScript motory (the JavaScript engine)](https://en.wikipedia.org/wiki/JavaScript_engine) diýlip atlandyrylýan motoryň kömegi bilen işläp bilýar.
 
-The browser has an embedded engine sometimes called a "JavaScript virtual machine".
+Brauzer-iň içine  "JavaScript virtual machine" diýen wirtual maşyn oturdylandyr.
 
-Different engines have different "codenames". For example:
+Her wirtual maşynyň özune mahsus "kod atlary" bardyr. Mysal üçin:
 
-- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...There are other codenames like "Chakra" for IE, "ChakraCore" for Microsoft Edge, "Nitro" and "SquirrelFish" for Safari, etc.
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) --  Chrome we Opera üçin.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- Firefox üçin.
+- ...Başga-da  IE(Internet Explorer) üçin "Chakra",  Microsoft Edge üçin "ChakraCore",  Safari üçin "Nitro" we "SquirrelFish" we ş.m.
 
-The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome and Opera.
+Ýokardaky atlary we adalgalary ýadyňyzda saklaň, sebabi olar internetdäki makalalarda ulanylýar. Olary biz hem ulanarys. Meselem, eger "X aýratynlyk V8 tarapyndan goldanylýar" diýilse, onda diýmek şol aýratynlyk Chrome we Opera brauzerlerinde işleýär diýmekdir.
 
 ```smart header="How do engines work?"
 
-Engines are complicated. But the basics are easy.
+Motorlar çylşyrymlydyr. Emma düýp esaslary aňsat.
 
-1. The engine (embedded if it's a browser) reads ("parses") the script.
-2. Then it converts ("compiles") the script to the machine language.
-3. And then the machine code runs, pretty fast.
+1. Motor (eger bir brauzer-e oturdylan bolsa (gömulen bolsa)) skriptleri  okarýar ("parses").
+2. Soňra ony maşyn diline öwürýär ("compiles").
+3. we maşyn diline öwürlen kod çalt işleýär.
 
-The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.
+Motor ýokardaky ädimleriň (prosesiň) dowamynda her ädimi optimizasiýa edýar. Hatda düzülen skriptiň işleýşine seredýär, içinden geçýän maglumatlary seljerýär we şol maglumatlaryň esasynda maşyn koduny hasam optimallaşdyrýar.
 ```
 
-## What can in-browser JavaScript do?
+## Brauzer-de JavaScript nämeler edip bilýär ?
 
-Modern JavaScript is a "safe" programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it.
+Häzirki zaman JavaScript "howpsuz" programmirleme dildir. Ol pes-derejeli (low-level) operasiýalary ýerine ýetirmeýär, ýagny kompýuteriň ýadyna ýa-da prosessora (CPU) girip bilmeýär, sebabi ol ilkibaşda şu operasiýalara zerurlyk duýmaýan brauzer-ler üçin niýetlenipdi.
 
-JavaScript's capabilities greatly depend on the environment it's running in. For instance, [Node.js](https://wikipedia.org/wiki/Node.js) supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc.
+JavaScript-iň ukyplary onuň işleýän sferasyna baglydyr. Meselem, [Node.js](https://wikipedia.org/wiki/Node.js) faýllary okaýan/ýazýan, tor isleglerini ýerine ýetirýän, we ş.m. ýaly funksiýalary goldaýar.
 
-In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.
+Brauzer-de JavaScript web sahypalary dolandyrmak, ulanyjy bilen interaksiýa (täsirleşmek) we brauzer-e degişli ähli zatlary edip biler.
 
-For instance, in-browser JavaScript is able to:
+Meselem, JavaScript brauzer-de şu aşakdakylary edip biler:
 
-- Add new HTML to the page, change the existing content, modify styles.
-- React to user actions, run on mouse clicks, pointer movements, key presses.
-- Send requests over the network to remote servers, download and upload files (so-called [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) and [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) technologies).
-- Get and set cookies, ask questions to the visitor, show messages.
-- Remember the data on the client-side ("local storage").
+- Sahypa täze HTML goşmak, bar bolan mazmuny üýtgetmek, stili (şekili) üýtgetmek.
+- Ulanyjy hereketlerine jogap bermek, syçanjygyň hereketlerini ýerine ýetirmek, kursoryň herektlerini, klawişa basylanda emele gelýän wakalary ýerine ýetirmek.
+- Tor-yň üsti bilen uzakdaky serwere maglumatlary ugratmak, faýllary indirmek(download) we ýüklemek (upload)  ([AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)) we [COMET](https://en.wikipedia.org/wiki/Comet_(programming)) diýip atlandyrylýan tehnologiýalar bilen).
+- Cookie-leri almak we ýerleşdirmek, sahypany zyýarat edýänlere sorag bermek, habarlary (maglumatlary) görkezmek.
+- Müşderi tarapynda (client-side) maglumatlary saklamak ("local storage").
 
-## What CAN'T in-browser JavaScript do?
+## JavaScript brauzer-de nameler edip bilmeýär ?
 
-JavaScript's abilities in the browser are limited for the sake of the user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+JavaScript-iň brauzerdäki ukyplary, ulanyjynyň howpsuzlygy üçin çäklidir. Esasy maksat, erbet web sahypasynyň şahsy maglumatlara girmeginiň ýa-da ulanyjynyň maglumatlaryna zyýan ýetirmeginiň öňüni almakdyr.
 
-Examples of such restrictions include:
+Şeýle çäklendirmelere şular girýär:
 
-- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS functions.
+- JavaScript web sahypada gaty disk-däki (hard disk) faýllary ýazyp/okap/pozup, olary göçürip alyp (kopýalap) ýa-da programmalary işledip bilmeýar. Onuň Operasion Sistema-nyň (OS) funksiýalaryna gös-göni girmäge rugsady ýokdur.
 
     Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
 
