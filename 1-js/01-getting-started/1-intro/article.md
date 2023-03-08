@@ -65,54 +65,55 @@ JavaScript-iň brauzerdäki ukyplary, ulanyjynyň howpsuzlygy üçin çäklidir.
 
 - JavaScript web sahypada gaty disk-däki (hard disk) faýllary ýazyp/okap/pozup, olary göçürip alyp (kopýalap) ýa-da programmalary işledip bilmeýar. Onuň Operasion Sistema-nyň (OS) funksiýalaryna gös-göni girmäge rugsady ýokdur.
 
-    Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
+    Häzirki zaman brauzerleri faýllar bilen işlemäge mümkinçilik berýär, emma giriş çäklidir we diňe ulanyjy faýly brauzeriň penjiresine "taşlamak" ýa-da  `<input>` teg-i arkaly saýlamak ýaly käbir hereketleri eden ýagdaýynda üpjün edilýär.
 
-    There are ways to interact with camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
-- Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other if they come from different sites (from a different domain, protocol or port).
+    Kamera/mikrofon we beýleki gurluşlary ulanmagyň ýollary bar, emma munuň üçin ulanyjynyň aç-açan rugsady talap edilýär. Şonuň üçin JavaScript bilen işleýan web sahypa  kamerany gizlinlikde işledip, daş-töweregi synlap we maglumatlary [NSA](https://en.wikipedia.org/wiki/National_Security_Agency)-a ugradyp bilmez.
+- Dürli-dürli penjireleriň/tablaryň biri-biri bilen baglanyşygy ýokdur (biri beýlekisini tanamaýar). Käwagt şeýle edýärler, meselem bir sahypa beýelikini JavaScript ulanyp açjak bolanda. Emma şeýle ýagdaýda hem JavaScript-iň beýleki tab-a girmage rugsady ýokdur, eger-de başga saýtdan (domain-den, protocol-dan ýa-da port-dan) gelýän bolsa.
 
-    This is called the "Same Origin Policy". To work around that, *both pages* must agree for data exchange and contain a special JavaScript code that handles it. We'll cover that in the tutorial.
 
-    This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com` and steal information from there.
-- JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's a safety limitation.
+    Muňa "Birmeňzeş gelip çykyş syýasaty"("Same Origin Policy") diýilýär. Munuň üstünde işlemek üçin * iki sahypa * maglumat alyşmak üçin biri-biri bilen ylalaşmaly we olary dolandyrýan ýörite JavaScript kody bolmaly. Munuň üstünde soňra durup geçeris.
+
+    Bu çäklendirme ulanyjynyň howpsuzlygy üçindir. Ulanyjynyň açan `http://anysite.com` sahypasy `http://gmail.com` URL bilen başga tab-a girip bilmez we ol ýerden maglumat ogurlap bilmez.
+- JavaScript açan sahypaňyz-da aňsatlyk bilen serwer bilen bilelikde maglumat alyş-çalyş edip biler. Emma başga saýt/domain bilen maglumat alyş-çalyş edip bilmegi kän bir mümkin däl. Mümkin bolsa-da, oňa uzakdaky serwerden aç-açan ylalaşyk (HTTP header-de anlatmaly) zerurdyr. Ýene bir gezek gaýtalaýaryn, bu ulanyjynyň howpsuzlygy üçindir.
 
 ![](limitations.svg)
 
-Such limits do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow plugin/extensions which may ask for extended permissions.
+Eger-de JavaScript brauzer-iň daşynda (meselem serwerde) ulanylsa, şeýle çäklendirmeler ýokdur. Häzirki zaman brauzerler giňeldilýän rugsatlary sorap bilýän  plugin we extension-lere hem rugsat berýär.
 
-## What makes JavaScript unique?
+## JavaScript-i näme zat özboluşly edýär?
 
-There are at least *three* great things about JavaScript:
+JavaScript-i özboluşly edýän iň azyndan *üç* sany zady aýtmak bolar:
 
 ```compare
-+ Full integration with HTML/CSS.
-+ Simple things are done simply.
-+ Support by all major browsers and enabled by default.
++ HTML/CSS bilen bilelikde dolulygyna işläp bilmegi.
++ Ýonekeý zatlary ýonekeýje edip bilmegi.
++ Tanymal ähli brauzer-ler tarapyndan goldanylýar we olarda deslapky (default) görnuşinde işleýändir.
 ```
-JavaScript is the only browser technology that combines these three things.
+JavaScript bu üç zady birleşdirýän ýeke-täk brauzer tehnologiýasydyr.
 
-That's what makes JavaScript unique. That's why it's the most widespread tool for creating browser interfaces.
+Ine JavaScript-i özboluşly edýän zat. Şonuň üçin brauzer interfeýslerini doretmek ulanylýänlygy üçin giňden ýaýrandyr.
 
-That said, JavaScript also allows to create servers, mobile applications, etc.
+Ýokarda belläp geçişimiz ýaly, JavaScript serwerleri döretmekde, mobil programmalary düzmekde, kompýuter programmalary we ş.m. ýerlerde ulanylýändyr.
 
-## Languages "over" JavaScript
+## JavaScript-iň "üstündäki" diller
 
-The syntax of JavaScript does not suit everyone's needs. Different people want different features.
+JavaScript-iň sintaksisi hemme kişiniň zerurlyklaryny doly laýyk gelenok. Her kim her hili aýratynlyklary isleýärler.
 
-That's to be expected, because projects and requirements are different for everyone.
+Ýagdaý şeýle, sebäbi her kişiniň proýektleri we zerurlyklary dürli-dürlidir.
 
-So recently a plethora of new languages appeared, which are *transpiled* (converted) to JavaScript before they run in the browser.
+Soňky döwürde brauzer-de işledilmezinden ozal JavaScript kodyna *transpiled* (öwrülen => converted) edilýän birnaçe dil emele geldi
 
-Modern tools make the transpilation very fast and transparent, actually allowing developers to code in another language and auto-converting it "under the hood".
+Häzirki zaman gurallar transplasiýany has tiz we aýdyn edip, programmistleriň başga dilde kod ýazmaklaryna mümkinçilik döretdiler.
 
-Examples of such languages:
+Şeýle dilleriň sanawy:
 
-- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
-- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
-- [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
-- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
-- [Brython](https://brython.info/) is a Python transpiler to JavaScript that allow to write application in pure Python without JavaScript.
+- [CoffeeScript](http://coffeescript.org/) JavaScript üçin "syntactic sugar" (sintaktik şeker)-dir . Bize has gysga kod ýazmaga, arassa we takyk kod ýazmaga mümkinçilik berýär. Edil Ruby programmistleri ýaly.
+- [TypeScript](http://www.typescriptlang.org/) çylşyrymly sistemalaryň ösüşini we goldawyny ýonekeýleşdirmek üçin "berk maglumat kysymlaryny" ýazmaga gönükdirilendir. TypeScript Microsoft tarapyndan döredilendir. 
+- [Flow](http://flow.org/) - munda hem "berk maglumat kysymlary"-ny goşup bilýärsiňiz, emma üýtgeşik usulda. Bu Facebook tarapyndan döredildi.
+- [Dart](https://www.dartlang.org/) brazuer ýok ýerlerinde (mobil programmalar ýaly) işýleýän, ýöne JavaScript-e convert edip bolýan özbaşdak motory (engine) bolan garaşsyz bir dildir. Bu Google tarapyndan döredildi.
+- [Brython](https://brython.info/) JavaScript-siz arassa Python kody bilen programma ýazmaga mümkinçilik berýän, JavaScript kodyna öwürýän Python transplýasiýasydyr.
 
-There are more. Of course, even if we use one of transpiled languages, we should also know JavaScript to really understand what we're doing.
+Ýene-de köp bar. Of course, even if we use one of transpiled languages, we should also know JavaScript to really understand what we're doing.
 
 ## Summary
 
