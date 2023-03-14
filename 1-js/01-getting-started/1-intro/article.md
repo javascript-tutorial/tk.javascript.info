@@ -115,8 +115,8 @@ Häzirki zaman gurallar transplasiýany has tiz we aýdyn edip, programmistleri�
 
 Ýene-de köp bar. Of course, even if we use one of transpiled languages, we should also know JavaScript to really understand what we're doing.
 
-## Summary
+## Gysgaça
 
-- JavaScript was initially created as a browser-only language, but is now used in many other environments as well.
-- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.
-- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+- JavaScript ilkibaşda diňe brauzer-de işleýän dil hökmünde döredilipdi, emma ol häzir başga birnäçe gurşawlarda işleýär.
+- Häzirki wagtda JavaScript, HTML / CSS bilen doly integrasiýa bilen iň giňden kabul edilen brauzer dili hökmünde özboluşly orny eýeleýär.
+- JavaScript-e "tranpirlenen" we käbir aýratynlyklary berýän köp dil bar. JavaScript-i özleşdirenden soň, iň bolmanda gysgaça olara göz aýlamak maslahat berilýär.
